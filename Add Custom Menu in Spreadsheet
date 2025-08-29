@@ -1,0 +1,10 @@
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu('My Menu')
+    .addItem('Insert Date', 'insertDate')
+    .addSubMenu(
+      ui.createMenu('Insert')
+        .addItem('Insert Date Again', 'insertDate')
+    )
+    .addToUi();
+}
